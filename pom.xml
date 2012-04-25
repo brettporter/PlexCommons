@@ -197,4 +197,10 @@
       </pluginRepositories>
     </profile>
   </profiles>
+  <distributionManagement>
+    <repository>
+      <id>maestrodev</id>
+      <url>https://repo.maestrodev.com/archiva/repository/3rdparty/</url>
+    </repository>
+  </distributionManagement>
 </project>
