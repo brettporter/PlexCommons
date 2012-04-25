@@ -1,13 +1,43 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.plexobject.commons</groupId>
   <artifactId>PlexCommons</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.4</version>
+      </dependency>
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.14</version>
+      </dependency>
+      <dependency>
+        <groupId>com.plexobject.commons</groupId>
+        <artifactId>plexobject-commons</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <name>PlexCommons</name>
   <url>http://github.com/bhatti/PlexCommons</url>
   <build>
+    <defaultGoal>assembly:assembly</defaultGoal>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptors>
+            <descriptor>src/main/assembly/src.xml</descriptor>
+          </descriptors>
+        </configuration>
+      </plugin>
+    </plugins>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -44,6 +74,8 @@
   </build>
   <modules>
     <module>plex-commons</module>
+    <module>plex-log4j-smtp</module>
+    <module>plex-http</module>
   </modules>
   <reporting>
     <outputDirectory>${basedir}/target/site</outputDirectory>
@@ -56,7 +88,7 @@
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <version>2.0.1</version>
         <reportSets>
-          <reportSet></reportSet>
+          <reportSet/>
         </reportSets>
       </plugin>
       <plugin>
@@ -114,4 +146,3 @@
     </profile>
   </profiles>
 </project>
-

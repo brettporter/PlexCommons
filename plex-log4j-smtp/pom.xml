@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.plexobject.commons</groupId>
+    <artifactId>PlexCommons</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.plexobject.commons</groupId>
+  <artifactId>plex-log4j-smtp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>plex-log4j-smtp</name>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.plexobject.commons</groupId>
+      <artifactId>plexobject-commons</artifactId>
+      <exclusions>
+        <exclusion>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+</project>
