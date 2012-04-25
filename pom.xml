@@ -8,7 +8,7 @@
   <url>http://github.com/bhatti/PlexCommons</url>
   <scm>
     <connection>scm:git:git://github.com/brettporter/PlexCommons.git</connection>
-    <developerConnection>scm:git:git@github.com:brettporter/PlexCommons.git</developerConnection>
+    <developerConnection>scm:git:git//github.com/brettporter/PlexCommons.git</developerConnection>
     <url>https://github.com/brettporter/PlexCommons</url>
   </scm>
   <dependencies>
